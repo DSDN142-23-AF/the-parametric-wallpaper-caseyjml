@@ -20,10 +20,12 @@ function wallpaper_background() {
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
   strokeWeight(1);
+  stroke(163, 141, 11);
+  fill(252, 231, 111);
 
   triangle(155, 120, 190, 140, 90, 150); // Cheese top
   
-  beginShape();
+  beginShape(); // Cheese base
   vertex(90, 150);
   vertex(95, 170);
   vertex(190, 170);
