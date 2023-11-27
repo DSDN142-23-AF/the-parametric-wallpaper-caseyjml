@@ -19,5 +19,15 @@ function wallpaper_background() {
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  rect(40 ,40, rect_width, rect_height);
+  strokeWeight(1);
+
+  triangle(155, 120, 190, 140, 90, 150); // Cheese top
+  
+  beginShape();
+  vertex(90, 150);
+  vertex(95, 170);
+  vertex(190, 170);
+  vertex(190, 140);
+  endShape(CLOSE);
+
 }
