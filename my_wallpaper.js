@@ -1,6 +1,5 @@
 //your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
+let CheeseHeight = 170;
 
 
 function setup_wallpaper(pWallpaper) {
@@ -26,8 +25,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   beginShape(); // Cheese
   vertex(155, 120);
   quadraticVertex(180, 120, 190, 140);
-  vertex(190, 170);
-  vertex(95, 170);
+  vertex(190, CheeseHeight);
+  vertex(95, CheeseHeight);
   vertex(90, 150);
   endShape(CLOSE);
 
