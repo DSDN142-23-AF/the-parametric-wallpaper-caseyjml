@@ -25,14 +25,13 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   beginShape(); // Cheese
   vertex(155, 120);
-  vertex(190, 140);
+  quadraticVertex(180, 120, 190, 140);
   vertex(190, 170);
   vertex(95, 170);
   vertex(90, 150);
   endShape(CLOSE);
 
-  line(90, 150, 190, 140);
+  line(90, 150, 190, 140); // Line through middle of cheese
 
-  circle
 
 }
