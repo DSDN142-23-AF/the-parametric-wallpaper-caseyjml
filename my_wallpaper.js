@@ -4,6 +4,10 @@ let CheeseY = 170 // Y location of cheese
 let CheeseHeight = CheeseY + 0 // height/thickness of the cheese
 let RatX = 60 // X location of rat
 let RatY = 80 // Y location of rat
+let NoseX = RatX + 0 // X location of rat nose
+let NoseY = RatY + 0 // Y location of rat nose
+let Tummy = RatX - 0 // Width of rat's tummy
+
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -60,13 +64,13 @@ function my_symbol() { // draw function
   stroke(50, 54, 53); // rat stroke colour
   fill(211, 219, 217); // rat fill colour
 
-  triangle(40, 105, 80, 105, 60, 145); // rat head
-  ellipse(RatX, RatY, 55, 80); // rat belly
-  circle(60, 143, 6); // rat nose
+  triangle(RatX-20, RatY+25, RatX+20, RatY+25, NoseX, NoseY+65); // rat head
+  ellipse(RatX, RatY, Tummy, RatY); // rat belly
+  circle(NoseX, NoseY+63, 6); // rat nose
 
   stroke(0); // eye colour
-  line(53, 125, 55, 124); // left eye
-  line(65, 124, 67, 125); // right eye
+  line(NoseX-7, NoseY+45, NoseX-5, NoseY+44); // left eye
+  line(NoseX+5, NoseY+44, NoseX+7, NoseY+45); // right eye
 
 
 }
