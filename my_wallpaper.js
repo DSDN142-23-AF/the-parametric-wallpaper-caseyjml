@@ -52,7 +52,7 @@ function my_symbol() {
   fill(240, 255, 240) // background colour
   ellipse(192, 155, 12, 14); // to cover half the righthand side ellipse
   noStroke();
-  rect(191, 145, 10, 30) // to remove the stroke of half the above ellipse
+  rect(191, 145, 8.5, 30) // to remove the stroke of half the above ellipse
 
 
 // RAT:
