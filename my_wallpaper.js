@@ -20,7 +20,8 @@ function wallpaper_background() {
   background(240, 255, 240); // light honeydew green colour
 }
 
-function my_symbol() { 
+
+function my_symbol() { // draw function
   
 // CHEESE:
   strokeWeight(2);
@@ -28,14 +29,14 @@ function my_symbol() {
   fill(252, 231, 111); // cheese fill colour
 
   beginShape(); // body of cheese
-  vertex(155, 120);
-  quadraticVertex(180, 120, 190, 140);
-  vertex(190, CheeseHeight);
-  vertex(95, CheeseHeight);
-  vertex(90, 150);
+  vertex(CheeseX-35, CheeseY-50);
+  quadraticVertex(CheeseX-10, CheeseY-50, CheeseX, CheeseY-30);
+  vertex(CheeseX, CheeseHeight);
+  vertex(CheeseX-95, CheeseHeight);
+  vertex(CheeseX-100, CheeseY-20);
   endShape(CLOSE);
 
-  line(90, 150, 190, 140); // line through middle of cheese
+  line(CheeseX-100, CheeseY-20, CheeseX, CheeseY-30); // line through middle of cheese
   
 
 
@@ -56,11 +57,16 @@ function my_symbol() {
 
 
 // RAT:
-  stroke(50, 54, 53); // dark grey
-  fill(211, 219, 217); // light grey 
+  stroke(50, 54, 53); // rat stroke colour
+  fill(211, 219, 217); // rat fill colour
 
-  ellipse(RatX, RatY, 50, 70); // rat belly
+  triangle(40, 105, 80, 105, 60, 145); // rat head
+  ellipse(RatX, RatY, 55, 80); // rat belly
+  circle(60, 143, 6); // rat nose
 
+  stroke(0); // eye colour
+  line(53, 125, 55, 124); // left eye
+  line(65, 124, 67, 125); // right eye
 
 
 }
