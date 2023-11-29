@@ -11,6 +11,8 @@ let TailX = 60 // 80 // X location of tail
 let TailLength = 5 // 5 // length of tail
 let TailAngle = 20 // 20 //  Y of first control point of tail
 let TailBend = 83 // 83 // X of second control point of tail
+let FlyX = 20
+let FlyY = 20
 
 
 
@@ -95,11 +97,14 @@ function my_symbol() { // draw function
   line(NoseX-7, NoseY+45, NoseX-5, NoseY+44); // left eye
   line(NoseX+5, NoseY+44, NoseX+7, NoseY+45); // right eye
 
+  DrawFly(20, 20);
+  DrawFly(180, 20);
 
-  // FLIES
-  let FlyX = 20
-  let FlyY = 20
 
+}
+
+function DrawFly(FlyX, FlyY){
+  
   strokeWeight(.5);
   stroke(50, 54, 53);
   fill(255);
