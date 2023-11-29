@@ -2,11 +2,14 @@
 let CheeseX = 190 // 190 // X location of cheese
 let CheeseY = 170 // 170 // Y location of cheese
 let CheeseHeight = CheeseY + 0 // 0 // height/thickness of the cheese
+let BiteSize = 30 // 30 // size of bite missing from cheese
+
 let RatX = 60 // 60 // X location of rat
 let RatY = 80 // 60 // Y location of rat
 let NoseX = RatX + 0 // 0 // X location of rat nose
 let NoseY = RatY + 0 // 0 // Y location of rat nose
 let Tummy = RatX + 0 // 0 // Width of rat's tummy
+
 let TailX = 60 // 80 // X location of tail
 let TailLength = 5 // 5 // length of tail
 let TailAngle = 20 // 20 //  Y of first control point of tail
@@ -66,8 +69,11 @@ function my_symbol() { // draw function
   fill(220, 239, 250) // background colour
   ellipse(CheeseX+2, CheeseY-15, 12, 14); // to cover half the righthand side ellipse
   noStroke();
-  rect(CheeseX+1, CheeseY-25, 8.5, 30) // to remove the stroke of half the above ellipse
+  rect(CheeseX+1, CheeseY-25, 8.5, 30); // to remove the stroke of half the above ellipse
 
+  // CHEESE BITES
+  ellipse(CheeseX-95, CheeseY-11, BiteSize, BiteSize-6);
+  ellipse(CheeseX-85, CheeseY-31, BiteSize+5, BiteSize+5);
 
 // RAT:
   stroke(255); // whisker colour
@@ -98,6 +104,7 @@ function my_symbol() { // draw function
   stroke(0); // eye colour
   line(NoseX-7, NoseY+45, NoseX-5, NoseY+44); // left eye
   line(NoseX+5, NoseY+44, NoseX+7, NoseY+45); // right eye
+
 
   //LOCATION OF FLIES;
   DrawFly(FX1, FY1);
