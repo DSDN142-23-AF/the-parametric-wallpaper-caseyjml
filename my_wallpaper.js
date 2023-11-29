@@ -3,17 +3,19 @@ let CheeseX = 190 // 190 // X location of cheese
 let CheeseY = 170 // 170 // Y location of cheese
 let CheeseHeight = CheeseY + 0 // 0 // height/thickness of the cheese
 let RatX = 60 // 60 // X location of rat
-let RatY = 60 // 60 // Y location of rat
+let RatY = 80 // 60 // Y location of rat
 let NoseX = RatX + 0 // 0 // X location of rat nose
 let NoseY = RatY + 0 // 0 // Y location of rat nose
 let Tummy = RatX + 0 // 0 // Width of rat's tummy
+let TailX = 68 // 80 // X location of tail
+let TailY = 10 // 7 // tail length
 
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+  pWallpaper.show_guide(true); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
@@ -71,6 +73,15 @@ function my_symbol() { // draw function
   vertex (RatX-15, RatY+50);
   endShape();
 
+  strokeWeight(4);
+  stroke(252, 199, 189); // tail colour
+
+  beginShape(); // tail
+  vertex(TailX+15, TailY);
+  bezierVertex(TailX+23, TailY+29, TailX, TailY+10, TailX-7, TailY+30);
+  endShape();
+
+  strokeWeight(2);
   stroke(50, 54, 53); // rat stroke colour
   fill(211, 219, 217); // rat fill colour
 
