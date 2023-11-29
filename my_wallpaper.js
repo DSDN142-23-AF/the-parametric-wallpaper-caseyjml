@@ -96,6 +96,15 @@ function my_symbol() { // draw function
   line(NoseX+5, NoseY+44, NoseX+7, NoseY+45); // right eye
 
 
-
+  // FLIES
+  
+  stroke(255);
+  fill(255);
+  ellipse(15, 20, 7, 5); // wing (left)
+  ellipse(25, 20, 7, 5); // wing (right)
+  
+  stroke(50, 54, 53);
+  fill(50, 54, 53); 
+  circle(20, 20, 2); // fly body
 
 }
