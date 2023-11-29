@@ -1,18 +1,19 @@
 //your parameter variables go here!
-let CheeseX = 190 // X location of cheese
-let CheeseY = 170 // Y location of cheese
-let CheeseHeight = CheeseY + 0 // height/thickness of the cheese
-let RatX = 60 // X location of rat
-let RatY = 60 // Y location of rat
-let NoseX = RatX + 0 // X location of rat nose
-let NoseY = RatY + 0 // Y location of rat nose
-let Tummy = RatX + 0 // Width of rat's tummy
+let CheeseX = 190 // 190 // X location of cheese
+let CheeseY = 170 // 170 // Y location of cheese
+let CheeseHeight = CheeseY + 0 // 0 // height/thickness of the cheese
+let RatX = 60 // 60 // X location of rat
+let RatY = 60 // 60 // Y location of rat
+let NoseX = RatX + 0 // 0 // X location of rat nose
+let NoseY = RatY + 0 // 0 // Y location of rat nose
+let Tummy = RatX + 0 // 0 // Width of rat's tummy
+
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
   pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
@@ -21,7 +22,7 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(240, 255, 240); // light honeydew green colour
+  background(220, 239, 250); // light honeydew green colour
 }
 
 
@@ -35,8 +36,8 @@ function my_symbol() { // draw function
   beginShape(); // body of cheese
   vertex(CheeseX-35, CheeseY-50);
   quadraticVertex(CheeseX-10, CheeseY-50, CheeseX, CheeseY-30);
-  vertex(CheeseX, CheeseHeight); // CHANGES CHEESE HEIGHT/THICKNESS
-  vertex(CheeseX-95, CheeseHeight); // CHANGES CHEESE HEIGHT/THICKNESS
+  vertex(CheeseX, CheeseHeight); // changes cheese thickness (right)
+  vertex(CheeseX-95, CheeseHeight); // changes cheese thickness (left)
   vertex(CheeseX-100, CheeseY-20);
   endShape(CLOSE);
 
@@ -54,13 +55,22 @@ function my_symbol() { // draw function
   ellipse(CheeseX, CheeseY-15, 17, 15); // righthand side hole
 
   // NEGATIVE SPACE (for cheese holes on border of cheese body)
-  fill(240, 255, 240) // background colour
+  fill(220, 239, 250) // background colour
   ellipse(CheeseX+2, CheeseY-15, 12, 14); // to cover half the righthand side ellipse
   noStroke();
   rect(CheeseX+1, CheeseY-25, 8.5, 30) // to remove the stroke of half the above ellipse
 
 
 // RAT:
+  stroke(255); // whisker colour
+  noFill();
+
+  beginShape(); // left side whiskers :)
+  vertex(RatX-15, RatY+56)
+  vertex (RatX-7, RatY+52);
+  vertex (RatX-15, RatY+50);
+  endShape();
+
   stroke(50, 54, 53); // rat stroke colour
   fill(211, 219, 217); // rat fill colour
 
@@ -71,6 +81,8 @@ function my_symbol() { // draw function
   stroke(0); // eye colour
   line(NoseX-7, NoseY+45, NoseX-5, NoseY+44); // left eye
   line(NoseX+5, NoseY+44, NoseX+7, NoseY+45); // right eye
+
+
 
 
 }
