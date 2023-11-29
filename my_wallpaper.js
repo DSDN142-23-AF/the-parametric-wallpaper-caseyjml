@@ -54,7 +54,7 @@ function my_symbol() { // draw function
 
   line(CheeseX-100, CheeseY-20, CheeseX, CheeseY-30); // line through middle of cheese
   
-
+// offline test
 
   // CHEESE HOLES:
   fill(224, 192, 74); // cheese shading colour (for holes)
