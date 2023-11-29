@@ -7,9 +7,10 @@ let RatY = 80 // 60 // Y location of rat
 let NoseX = RatX + 0 // 0 // X location of rat nose
 let NoseY = RatY + 0 // 0 // Y location of rat nose
 let Tummy = RatX + 0 // 0 // Width of rat's tummy
-let TailX = 68 // 80 // X location of tail
-let TailY = 10 // 7 // Y location of tail
-let TailLength = TailY+30 // 0 // length of tail
+let TailX = 60 // 80 // X location of tail
+let TailLength = 5 // 5 // length of tail
+let TailAngle = 20 // 20 //  Y of first control point of tail
+let TailBend = 83 // 83 // X of second control point of tail
 
 
 
@@ -78,8 +79,8 @@ function my_symbol() { // draw function
   stroke(252, 199, 189); // tail colour
 
   beginShape(); // tail
-  vertex(TailX+15, TailY);
-  bezierVertex(TailX+23, TailY+29, TailX, TailY+10, TailX-7, TailLength);
+  vertex(RatX+15, TailLength);
+  bezierVertex(TailBend, RatY-41, RatX, TailAngle, RatX, RatY-40);
   endShape();
 
   strokeWeight(2);
