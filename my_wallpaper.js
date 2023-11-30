@@ -3,6 +3,7 @@ let CheeseX = 190 // 190 // X location of cheese
 let CheeseY = 170 // 170 // Y location of cheese
 let CheeseHeight = CheeseY + 0 // 0 // height/thickness of the cheese
 let BiteSize = 30 // 30 // size of bite missing from cheese
+let ShowBites = true;
 
 let RatX = 60 // 60 // X location of rat
 let RatY = 80 // 60 // Y location of rat
@@ -19,6 +20,7 @@ let FX1 = 20 // 20 // X location of fly 1
 let FY1 = 20 // 20 // Y location of fly 1
 let FX2 = 180 // 180 // X location of fly 2
 let FY2 = 20 // 20 // Y location of fly 2
+
 
 
 function setup_wallpaper(pWallpaper) {
@@ -72,8 +74,10 @@ function my_symbol() { // draw function
   rect(CheeseX+1, CheeseY-25, 8.5, 30); // to remove the stroke of half the above ellipse
 
   // CHEESE BITES
-  ellipse(CheeseX-95, CheeseY-11, BiteSize, BiteSize-6);
-  ellipse(CheeseX-85, CheeseY-31, BiteSize+5, BiteSize+5);
+  if(ShowBites){
+    ellipse(CheeseX-95, CheeseY-11, BiteSize, BiteSize-6);
+    ellipse(CheeseX-85, CheeseY-31, BiteSize+5, BiteSize+5);
+  }
 
 // RAT:
   stroke(255); // whisker colour
