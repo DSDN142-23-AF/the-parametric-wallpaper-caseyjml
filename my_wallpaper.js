@@ -94,6 +94,12 @@ function my_symbol() { // draw function
   vertex (RatX-15, RatY+50);
   endShape();
 
+  beginShape(); // right side whiskers
+  vertex(RatX+15, RatY+56)
+  vertex (RatX+7, RatY+52);
+  vertex (RatX+15, RatY+50);
+  endShape();
+
   strokeWeight(4);
   stroke(252, 199, 189); // tail colour
 
