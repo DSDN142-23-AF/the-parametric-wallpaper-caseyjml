@@ -1,24 +1,24 @@
 //PARAMETER VARIABLES
-let CheeseX = 190 // 190 // X location of cheese
-let CheeseY = 170 // 170 // Y location of cheese
-let CheeseHeight = CheeseY + 0 // 0 // height/thickness of the cheese
-let Mold = false; // makes the cheese green
+let CheeseX = 140 // 190 // X location of cheese
+let CheeseY = 180 // 170 // Y location of cheese
+let CheeseHeight = CheeseY + 30 // 0 // height/thickness of the cheese
+let Mold = true; // makes the cheese green
 
-let BiteSize = 30 // 30 // Changes size of bites in cheese
+let BiteSize = 80 // 30 // Changes size of bites in cheese
 let ShowBites = true; // Turns bites in cheese on/of
 
 let RatX = 50 // 60 // X location of rat
 let RatY = 90 // 90 // Y location of rat
 let NoseX = RatX + 15 // 0 // X location of rat nose
-let NoseY = RatY + 10 // 0 // Y location of rat nose
-let Tummy = RatX + 20 // 0 // Width of rat's tummy
+let NoseY = RatY + 30 // 0 // Y location of rat nose
+let Tummy = RatX + 40 // 0 // Width of rat's tummy
 
-let TailX = 200 // 80 // X location of tail
-let TailLength = 150 // 5 // length of tail
+let TailX = 80 // 80 // X location of tail
+let TailLength = 0 // 5 // length of tail
 let TailAngle = 20 // 20 //  Y of first control point of tail
-let TailBend = 200 // 83 // X of second control point of tail
+let TailBend = 90 // 83 // X of second control point of tail
 
-let FX1 = 50 // 20 // X location of fly 1
+let FX1 = 30 // 20 // X location of fly 1
 let FY1 = 200 // 20 // Y location of fly 1
 let FX2 = 120 // 180 // X location of fly 2
 let FY2 = 100 // 20 // Y location of fly 2
@@ -30,8 +30,8 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 180;
-  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.cell_width  = 150;
+  pWallpaper.grid_settings.cell_height = 250;
   pWallpaper.grid_settings.row_offset  = 100;
 }
 
