@@ -3,8 +3,8 @@ let CheeseX = 190 // 190 // X location of cheese
 let CheeseY = 170 // 170 // Y location of cheese
 let CheeseHeight = CheeseY + 0 // 0 // height/thickness of the cheese
 
-let BiteSize = 50 // 30 // Changes size of bites in cheese
-let ShowBites = true; // Turns bites in cheese on/of
+let BiteSize = 30 // 30 // Changes size of bites in cheese
+let ShowBites = false; // Turns bites in cheese on/of
 
 let RatX = 60 // 60 // X location of rat
 let RatY = 80 // 60 // Y location of rat
@@ -12,15 +12,15 @@ let NoseX = RatX + 0 // 0 // X location of rat nose
 let NoseY = RatY + 0 // 0 // Y location of rat nose
 let Tummy = RatX + 0 // 0 // Width of rat's tummy
 
-let TailX = 60 // 80 // X location of tail
+let TailX = 150 // 80 // X location of tail
 let TailLength = 5 // 5 // length of tail
-let TailAngle = 20 // 20 //  Y of first control point of tail
-let TailBend = 83 // 83 // X of second control point of tail
+let TailAngle = 2 // 20 //  Y of first control point of tail
+let TailBend = 150 // 83 // X of second control point of tail
 
-let FX1 = 20 // 20 // X location of fly 1
-let FY1 = 20 // 20 // Y location of fly 1
-let FX2 = 180 // 180 // X location of fly 2
-let FY2 = 20 // 20 // Y location of fly 2
+let FX1 = 100 // 20 // X location of fly 1
+let FY1 = 40 // 20 // Y location of fly 1
+let FX2 = 170 // 180 // X location of fly 2
+let FY2 = 100 // 20 // Y location of fly 2
 
 
 
@@ -104,7 +104,7 @@ function my_symbol() { // draw function
   stroke(252, 199, 189); // tail colour
 
   beginShape(); // tail
-  vertex(RatX+15, TailLength);
+  vertex(TailX, TailLength);
   bezierVertex(TailBend, RatY-41, RatX, TailAngle, RatX, RatY-40);
   endShape();
 
@@ -123,7 +123,7 @@ function my_symbol() { // draw function
 
   //LOCATION OF FLIES;
   DrawFly(FX1, FY1);
-  DrawFly(FX2, FX2);
+  DrawFly(FX2, FY2);
 
 
 }
