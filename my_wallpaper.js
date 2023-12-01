@@ -1,20 +1,20 @@
 //PARAMETER VARIABLES
 let CheeseX = 140 // 190 // X location of cheese
 let CheeseY = 180 // 170 // Y location of cheese
-let CheeseHeight = CheeseY + 30 // 0 // height/thickness of the cheese
-let Mold = true; // makes the cheese green
+let CheeseHeight = CheeseY + 100 // 0 // height/thickness of the cheese
+let Mold = false; // makes the cheese green
 
 let BiteSize = 80 // 30 // Changes size of bites in cheese
 let ShowBites = true; // Turns bites in cheese on/of
 
 let RatX = 50 // 60 // X location of rat
-let RatY = 90 // 90 // Y location of rat
+let RatY = 110 // 90 // Y location of rat
 let NoseX = RatX + 15 // 0 // X location of rat nose
-let NoseY = RatY + 30 // 0 // Y location of rat nose
+let NoseY = RatY + 15 // 0 // Y location of rat nose
 let Tummy = RatX + 40 // 0 // Width of rat's tummy
 
-let TailX = 80 // 80 // X location of tail
-let TailLength = 0 // 5 // length of tail
+let TailX = 150 // 80 // X location of tail
+let TailLength = 35 // 5 // length of tail (smaller # = longer tail)
 let TailAngle = 20 // 20 //  Y of first control point of tail
 let TailBend = 90 // 83 // X of second control point of tail
 
