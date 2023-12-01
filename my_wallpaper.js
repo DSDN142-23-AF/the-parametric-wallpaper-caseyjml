@@ -2,6 +2,7 @@
 let CheeseX = 190 // 190 // X location of cheese
 let CheeseY = 170 // 170 // Y location of cheese
 let CheeseHeight = CheeseY + 0 // 0 // height/thickness of the cheese
+let Mold = true;
 
 let BiteSize = 30 // 30 // Changes size of bites in cheese
 let ShowBites = false; // Turns bites in cheese on/of
@@ -47,6 +48,10 @@ function my_symbol() { // draw function
   stroke(163, 141, 11); // cheese line colour
   fill(252, 231, 111); // cheese fill colour
 
+  if(Mold){ // yucky cheese mold
+    fill(169, 212, 129);
+  }
+
   beginShape(); // body of cheese
   vertex(CheeseX-35, CheeseY-50);
   quadraticVertex(CheeseX-10, CheeseY-50, CheeseX, CheeseY-30);
@@ -80,9 +85,6 @@ function my_symbol() { // draw function
     ellipse(CheeseX-85, CheeseY-30, BiteSize+5, BiteSize-5);
   }
 
-  if(BiteSize>49){
-    
-  }
 
 // RAT:
   stroke(255); // whisker colour
