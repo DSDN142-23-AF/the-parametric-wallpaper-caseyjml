@@ -1,27 +1,27 @@
 //PARAMETER VARIABLES
-let CheeseX = 200 // 190 // X location of cheese
-let CheeseY = 60 // 170 // Y location of cheese
-let CheeseHeight = CheeseY + 120 // 0 // height/thickness of the cheese
-let Mold = false; // makes the cheese green
+let CheeseX = 190 // 190 // X location of cheese
+let CheeseY = 170 // 170 // Y location of cheese
+let CheeseHeight = CheeseY + 0 // 0 // height/thickness of the cheese
+let Mold = true; // makes the cheese green
 
-let BiteSize = 30 // 30 // Changes size of bites in cheese
+let BiteSize = 45 // 30 // Changes size of bites in cheese
 let ShowBites = true; // Turns bites in cheese on/of
 
 let RatX = 50 // 60 // X location of rat
-let RatY = 140 // 60 // Y location of rat
+let RatY = 80 // 60 // Y location of rat
 let NoseX = RatX + 20 // 0 // X location of rat nose
 let NoseY = RatY + 0 // 0 // Y location of rat nose
-let Tummy = RatX + 10 // 0 // Width of rat's tummy
+let Tummy = RatX + 70 // 0 // Width of rat's tummy
 
-let TailX = 80 // 80 // X location of tail
+let TailX = 200 // 80 // X location of tail
 let TailLength = 30 // 5 // length of tail
 let TailAngle = 20 // 20 //  Y of first control point of tail
-let TailBend = 70 // 83 // X of second control point of tail
+let TailBend = -120 // 83 // X of second control point of tail
 
-let FX1 = 40 // 20 // X location of fly 1
-let FY1 = 20 // 20 // Y location of fly 1
-let FX2 = 80 // 180 // X location of fly 2
-let FY2 = 85 // 20 // Y location of fly 2
+let FX1 = 180 // 20 // X location of fly 1
+let FY1 = 150 // 20 // Y location of fly 1
+let FX2 = 160 // 180 // X location of fly 2
+let FY2 = 180 // 20 // Y location of fly 2
 
 
 function setup_wallpaper(pWallpaper) {

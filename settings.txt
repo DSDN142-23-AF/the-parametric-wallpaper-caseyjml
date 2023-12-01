@@ -91,3 +91,39 @@ function setup_wallpaper(pWallpaper) {
 
 Wallpaper 3:
 
+//PARAMETER VARIABLES
+let CheeseX = 190 // X location of cheese
+let CheeseY = 170 // Y location of cheese
+let CheeseHeight = CheeseY + 0 // height/thickness of the cheese
+let Mold = true; // makes the cheese green
+
+let BiteSize = 45 // Changes size of bites in cheese
+let ShowBites = true; // Turns bites in cheese on/of
+
+let RatX = 50 // X location of rat
+let RatY = 80 // Y location of rat
+let NoseX = RatX + 20 // X location of rat nose
+let NoseY = RatY + 0 // Y location of rat nose
+let Tummy = RatX + 70 // Width of rat's tummy
+
+let TailX = 200 // X location of tail
+let TailLength = 30 // length of tail
+let TailAngle = 20 //  Y of first control point of tail
+let TailBend = -120 // X of second control point of tail
+
+let FX1 = 180 // X location of fly 1
+let FY1 = 150 // Y location of fly 1
+let FX2 = 160 // X location of fly 2
+let FY2 = 180 // Y location of fly 2
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
