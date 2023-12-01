@@ -2,8 +2,9 @@
 let CheeseX = 190 // 190 // X location of cheese
 let CheeseY = 170 // 170 // Y location of cheese
 let CheeseHeight = CheeseY + 0 // 0 // height/thickness of the cheese
-let BiteSize = 30 // 30 // size of bite missing from cheese
-let ShowBites = true;
+
+let BiteSize = 50 // 30 // Changes size of bites in cheese
+let ShowBites = true; // Turns bites in cheese on/of
 
 let RatX = 60 // 60 // X location of rat
 let RatY = 80 // 60 // Y location of rat
@@ -76,7 +77,11 @@ function my_symbol() { // draw function
   // CHEESE BITES
   if(ShowBites){
     ellipse(CheeseX-95, CheeseY-11, BiteSize, BiteSize-6);
-    ellipse(CheeseX-85, CheeseY-31, BiteSize+5, BiteSize+5);
+    ellipse(CheeseX-85, CheeseY-30, BiteSize+5, BiteSize-5);
+  }
+
+  if(BiteSize>49){
+    
   }
 
 // RAT:
