@@ -1,34 +1,33 @@
-//your parameter variables go here!
-let CheeseX = 190 // 190 // X location of cheese
-let CheeseY = 170 // 170 // Y location of cheese
-let CheeseHeight = CheeseY + 0 // 0 // height/thickness of the cheese
-let Mold = true;
+//PARAMETER VARIABLES
+let CheeseX = 200 // 190 // X location of cheese
+let CheeseY = 150 // 170 // Y location of cheese
+let CheeseHeight = CheeseY + 20 // 0 // height/thickness of the cheese
+let Mold = false; // makes the cheese green
 
 let BiteSize = 30 // 30 // Changes size of bites in cheese
 let ShowBites = false; // Turns bites in cheese on/of
 
-let RatX = 60 // 60 // X location of rat
-let RatY = 80 // 60 // Y location of rat
+let RatX = 50 // 60 // X location of rat
+let RatY = 40 // 60 // Y location of rat
 let NoseX = RatX + 0 // 0 // X location of rat nose
 let NoseY = RatY + 0 // 0 // Y location of rat nose
 let Tummy = RatX + 0 // 0 // Width of rat's tummy
 
-let TailX = 150 // 80 // X location of tail
+let TailX = 200 // 80 // X location of tail
 let TailLength = 5 // 5 // length of tail
 let TailAngle = 2 // 20 //  Y of first control point of tail
 let TailBend = 150 // 83 // X of second control point of tail
 
-let FX1 = 100 // 20 // X location of fly 1
-let FY1 = 40 // 20 // Y location of fly 1
-let FX2 = 170 // 180 // X location of fly 2
-let FY2 = 100 // 20 // Y location of fly 2
-
+let FX1 = 25 // 20 // X location of fly 1
+let FY1 = 3 // 20 // Y location of fly 1
+let FX2 = 10 // 180 // X location of fly 2
+let FY2 = 3 // 20 // Y location of fly 2
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
-  pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;

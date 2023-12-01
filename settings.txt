@@ -1,54 +1,47 @@
 You will need to fill out this file for hand in. 
 
-The bellow is just an example, feel free to disregard this documents contents.
-
-
-Your final settings.txt will look something like this when you are finished:
 
 /////////////////////////////////
 
 Wallpaper 1:
 
-//your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+//PARAMETER VARIABLES
+let CheeseX = 200 // X location of cheese
+let CheeseY = 150 // Y location of cheese
+let CheeseHeight = CheeseY + 20 // height/thickness of the cheese
+let Mold = false; // makes the cheese green
+
+let BiteSize = 30 // Changes size of bites in cheese
+let ShowBites = false; // Turns bites in cheese on/of
+
+let RatX = 50 // X location of rat
+let RatY = 40 // Y location of rat
+let NoseX = RatX + 0 // X location of rat nose
+let NoseY = RatY + 0 // Y location of rat nose
+let Tummy = RatX + 0 // Width of rat's tummy
+
+let TailX = 200 // X location of tail
+let TailLength = 5 // length of tail
+let TailAngle = 2 //  Y of first control point of tail
+let TailBend = 150 // X of second control point of tail
+
+let FX1 = 25 /// X location of fly 1
+let FY1 = 3 // Y location of fly 1
+let FX2 = 10 // X location of fly 2
+let FY2 = 3 // Y location of fly 2
+
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
   pWallpaper.grid_settings.row_offset  = 50;
 }
 
 /////////////////////////////////
 
 Wallpaper 2:
-
-//your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
-
-function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
-
-  //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 0;
-}
