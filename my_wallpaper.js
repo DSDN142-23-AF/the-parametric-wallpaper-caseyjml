@@ -1,38 +1,38 @@
 //PARAMETER VARIABLES
 let CheeseX = 190 // 190 // X location of cheese
-let CheeseY = 40 // 170 // Y location of cheese
-let CheeseHeight = CheeseY + 195 // 0 // height/thickness of the cheese
-let Mold = false; // makes the cheese green
+let CheeseY = 170 // 170 // Y location of cheese
+let CheeseHeight = CheeseY + 0 // 0 // height/thickness of the cheese
+let Mold = true; // makes the cheese green
 
-let BiteSize = 30 // 30 // Changes size of bites in cheese
+let BiteSize = 15 // 30 // Changes size of bites in cheese
 let ShowBites = true; // Turns bites in cheese on/of
 
-let RatX = 50 // 60 // X location of rat
-let RatY = 180 // 90 // Y location of rat
-let NoseX = RatX + 5 // 0 // X location of rat nose
-let NoseY = RatY + 20 // 0 // Y location of rat nose
-let Tummy = RatX + 0 // 0 // Width of rat's tummy
+let RatX = 60 // 60 // X location of rat
+let RatY = 90 // 90 // Y location of rat
+let NoseX = RatX + 20 // 0 // X location of rat nose
+let NoseY = RatY + 40 // 0 // Y location of rat nose
+let Tummy = RatX + 100 // 0 // Width of rat's tummy
 
-let TailX = 50 // 80 // X location of tail
-let TailLength = 20 // 5 // length of tail (smaller # = longer tail)
-let TailAngle = 50 // 20 //  Y of first control point of tail
-let TailBend = 90 // 83 // X of second control point of tail
+let TailX = -150 // 80 // X location of tail
+let TailLength = 0 // 5 // length of tail (smaller # = longer tail)
+let TailAngle = -20 // 20 //  Y of first control point of tail
+let TailBend = -90 // 83 // X of second control point of tail
 
-let FX1 = 10 // 20 // X location of fly 1
-let FY1 = 200 // 20 // Y location of fly 1
-let FX2 = 10 // 180 // X location of fly 2
-let FY2 = 150 // 20 // Y location of fly 2
+let FX1 = 180 // 20 // X location of fly 1
+let FY1 = 40 // 20 // Y location of fly 1
+let FX2 = 180 // 180 // X location of fly 2
+let FY2 = 195 // 180 // Y location of fly 2
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
-  pWallpaper.grid_settings.cell_height = 250;
-  pWallpaper.grid_settings.row_offset  = 100;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 50;
 }
 
 function wallpaper_background() {
